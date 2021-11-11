@@ -1,0 +1,10 @@
+[Unit]
+Description=UDPGW
+
+[Service]
+User=root
+#WorkingDirectory=/root/
+ExecStart=/usr/local/bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 250 --max-connections-for-client 3
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=MRz
+
+[Service]
+User=root
+WorkingDirectory=/root/
+ExecStart=/usr/bin/python /root/.mrz/PDirect.py 8080
+
+[Install]
+WantedBy=multi-user.target
